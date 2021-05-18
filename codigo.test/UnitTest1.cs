@@ -96,5 +96,29 @@ namespace codigo.test
 
         }
 
+        [Test]
+        public void MoreTopicsThanGroups()
+        {
+
+            int topicsQuantity = 10;
+            int groupsQuantity = 5;
+
+            if (topicsQuantity > groupsQuantity)
+            {
+
+                Assert.Pass();
+                
+            }
+
+        }
+
+        [Test]
+        public void TestingRandomness()
+        {
+
+            Assert.Pass();
+
+        }
+
     }
 }

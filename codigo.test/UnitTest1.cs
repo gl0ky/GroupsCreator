@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
-
+using System.Collections.Generic;
+using codigo.produccion.Interfaces;
 namespace codigo.test
 {
     public class Tests
@@ -115,8 +116,57 @@ namespace codigo.test
         [Test]
         public void TestingRandomness()
         {
+            string pathTeams = "";
+            string pathTopics = "";
+            double porcentError = 0.05;
+            int executionQuantity = 1000;
+            int teamsQuantity = 5;
 
-            Assert.Pass();
+            bool passTest = true;
+
+            var students = new Dictionary<string, Dictionary<string, int>>();
+
+            for (int i = 0; i < executionQuantity; i++)
+            {
+                var teams = new List<IEquipo>(); // Aqui se van a generar los equipos
+                
+                // Aqui se van a asignar los temas
+                foreach (var team in teams)
+                {
+                    foreach (var student in team.Estudiantes)
+                    {
+                        if (students.ContainsKey(student)) {
+                            if (students[student].ContainsKey(team.Nombre)) {
+                                students[student][team.Nombre] += 1;
+                                continue;
+                            }
+                            students[student].Add(team.Nombre, 1);
+                            continue;
+                        }
+                        students.Add(student, new Dictionary<string, int>());
+                        students[student].Add(team.Nombre, 1);
+                    }
+                }
+
+                foreach (var student in students) 
+                {
+                    if (!passTest) {
+                        break;
+                    }
+
+                    foreach (var team in student.Value.Keys)
+                    {
+                        double frequency = (double)students[student.Key][team] / (double) executionQuantity;
+                        double probability = (double) 1 / (double) teamsQuantity;
+                        if (frequency < probability - porcentError || frequency > probability + porcentError) {
+                            passTest = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            Assert.IsTrue(passTest);
 
         }
 

@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace codigo.test
 {
@@ -9,10 +10,23 @@ namespace codigo.test
         {
         }
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+        public void GroupsException(){
+
+            throw new ArgumentException("Los grupos no pueden ser mayores que los estudiantes");
+
         }
+
+        [Test]
+        public void LessStudentsThanGroups()
+        {
+
+            int studentsQuantity = 5;
+            int groupsQuantity = 10;
+
+            if(studentsQuantity < groupsQuantity){
+
+                Assert.Throws<ArgumentException>(GroupsException);
+
+            }
     }
 }

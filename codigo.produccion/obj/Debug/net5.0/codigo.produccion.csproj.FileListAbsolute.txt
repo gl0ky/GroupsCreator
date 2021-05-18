@@ -1,0 +1,12 @@
+/root/Grabacion/GroupsCreator/codigo.produccion/bin/Debug/net5.0/codigo.produccion.deps.json
+/root/Grabacion/GroupsCreator/codigo.produccion/bin/Debug/net5.0/codigo.produccion.dll
+/root/Grabacion/GroupsCreator/codigo.produccion/bin/Debug/net5.0/ref/codigo.produccion.dll
+/root/Grabacion/GroupsCreator/codigo.produccion/bin/Debug/net5.0/codigo.produccion.pdb
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.csprojAssemblyReference.cache
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.GeneratedMSBuildEditorConfig.editorconfig
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.AssemblyInfoInputs.cache
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.AssemblyInfo.cs
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.csproj.CoreCompileInputs.cache
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.dll
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/ref/codigo.produccion.dll
+/root/Grabacion/GroupsCreator/codigo.produccion/obj/Debug/net5.0/codigo.produccion.pdb

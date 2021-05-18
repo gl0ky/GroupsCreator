@@ -16,6 +16,12 @@ namespace codigo.test
 
         }
 
+        public void TopicsException(){
+
+            throw new ArgumentException("Los temas no pueden ser menores que los grupos");
+
+        }
+
         [Test]
         public void LessStudentsThanGroups()
         {
@@ -57,6 +63,35 @@ namespace codigo.test
 
                 Assert.Pass();
                 
+            }
+
+        }
+
+        [Test]
+        public void LessTopicsThanGroups()
+        {
+
+            int topicsQuantity = 10;
+            int groupsQuantity = 5;
+
+            if(topicsQuantity > groupsQuantity){
+
+                Assert.Throws<ArgumentException>(TopicsException);
+
+            }
+
+        }
+
+        [Test]
+        public void SameTopics_SameGroups(){
+
+            int topicsQuantity = 10;
+            int groupsQuantity = 10;
+
+            if(topicsQuantity == groupsQuantity){
+
+                Assert.Pass();
+
             }
 
         }
